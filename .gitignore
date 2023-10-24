@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+.npm/
+
+# Vite
+.vite/
+
+# IDE and editor specific files
+.vscode/
+.idea/
+
+# Build output
+dist/
