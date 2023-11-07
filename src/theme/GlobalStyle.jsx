@@ -14,8 +14,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    padding-left: 150px;
     font-size: 1.6rem; // 16px, happy rems
     font-family: "Montserrat", sans-serif;
-    background-color: darkslategrey;
+    //background-color: darkslategrey;
   }
 `
