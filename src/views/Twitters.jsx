@@ -1,9 +1,9 @@
 import {Card} from "src/components/molecules/Card/Card.jsx";
 import {GridTemplate} from "src/template/GridTemplate.jsx";
 
-const twitters = [
+export const twitters = [
     {
-        id: 1,
+        id: 0,
         title: 'Hello Roman',
         content:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
@@ -11,7 +11,7 @@ const twitters = [
         twitterName: 'https://static01.nyt.com/images/2020/03/09/sports/09nba-topteams1/09nba-topteams1-mediumSquareAt3X.jpg',
     },
     {
-        id: 2,
+        id: 1,
         title: 'Redux guy',
         content:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
@@ -19,7 +19,7 @@ const twitters = [
         twitterName: 'https://hips.hearstapps.com/hmg-prod/images/gettyimages-1197736160.jpg?crop=1.00xw:0.667xh;0,0.0420xh&resize=640:*',
     },
     {
-        id: 3,
+        id: 2,
         title: 'React router stuff',
         content:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
@@ -27,7 +27,7 @@ const twitters = [
         twitterName: 'https://i.pinimg.com/564x/86/df/72/86df7231309d69a74da6192754e2ddef.jpg',
     },
     {
-        id: 4,
+        id: 3,
         title: 'Super animacje!',
         content:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',

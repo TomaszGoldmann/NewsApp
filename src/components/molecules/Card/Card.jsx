@@ -4,6 +4,7 @@ import Paragraph from "src/components/atoms/Paragraph/Paragraph.jsx";
 import Button from "src/components/atoms/Button/Button.jsx";
 import Heading from "src/components/atoms/Heading/Heading.jsx";
 import LinkIcon from "src/assets/icons/link.svg"
+import {useNavigate} from "react-router-dom";
 
 const StyledWrapper = styled.div`
   min-height: 330px;
@@ -13,6 +14,12 @@ const StyledWrapper = styled.div`
   position: relative;
   display: grid;
   grid-template-rows: 0.25fr 1fr;
+
+  &:hover {
+    transition: 0.2s;
+    scale: 1.01;
+    cursor: pointer;
+  }
 `
 
 const InnerWrapper = styled.div`
@@ -65,23 +72,28 @@ const StyledLinkButton = styled.a`
   transform: translateY(-50%);
 `
 
-export const Card = ({cardType, title, created, twitterName, articleUrl, content}) => (
-    <StyledWrapper>
-        <InnerWrapper activeColor={cardType}>
-            <StyledHeading>{title}</StyledHeading>
-            <DateInfo>{created}</DateInfo>
-            {cardType === 'twitters' && <StyledAvatar src={`${twitterName}`} />}
-            {cardType === 'articles' && <StyledLinkButton href={articleUrl}/>}
-        </InnerWrapper>
-        <InnerWrapper flex>
-            <Paragraph>{content}</Paragraph>
-            <Button secondary={true}>Remove</Button>
-        </InnerWrapper>
-    </StyledWrapper>
-)
+export const Card = ({id, cardType, title, created, twitterName, articleUrl, content}) => {
+    const navigate = useNavigate()
+
+    return (
+        <StyledWrapper onClick={()=> navigate(`${id}`)}>
+            <InnerWrapper activeColor={cardType}>
+                <StyledHeading>{title}</StyledHeading>
+                <DateInfo>{created}</DateInfo>
+                {cardType === 'twitters' && <StyledAvatar src={`${twitterName}`}/>}
+                {cardType === 'articles' && <StyledLinkButton href={articleUrl}/>}
+            </InnerWrapper>
+            <InnerWrapper flex>
+                <Paragraph>{content}</Paragraph>
+                <Button secondary={true}>Remove</Button>
+            </InnerWrapper>
+        </StyledWrapper>
+    )
+}
 
 Card.propTypes = {
     cardType: PropTypes.oneOf(['notes', 'twitters', 'articles']),
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     created: PropTypes.string.isRequired,
     twitterName: PropTypes.string,

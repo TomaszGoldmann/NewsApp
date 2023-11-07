@@ -1,9 +1,9 @@
 import {Card} from "src/components/molecules/Card/Card.jsx";
 import {GridTemplate} from "src/template/GridTemplate.jsx";
 
-const articles = [
+export const articles = [
     {
-        id: 1,
+        id: 0,
         title: 'React on my mind',
         content:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
@@ -11,7 +11,7 @@ const articles = [
         created: '1 day',
     },
     {
-        id: 2,
+        id: 1,
         title: 'Wish you React',
         content:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
@@ -19,7 +19,7 @@ const articles = [
         created: '1 day',
     },
     {
-        id: 3,
+        id: 2,
         title: 'You gave React a bad name',
         content:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',
@@ -27,7 +27,7 @@ const articles = [
         created: '5 days',
     },
     {
-        id: 4,
+        id: 3,
         title: 'Is it React you looking for?',
         content:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi',

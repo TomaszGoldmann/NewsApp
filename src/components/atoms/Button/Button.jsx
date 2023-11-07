@@ -11,6 +11,12 @@ const Button = styled.button`
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
+  
+  &:hover{
+    transition: 0.2s;
+    opacity: 0.9;
+    scale: 0.95;
+  }
 
   ${({ secondary }) =>
     secondary &&

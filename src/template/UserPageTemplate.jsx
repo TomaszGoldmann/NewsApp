@@ -9,7 +9,7 @@ export const UserPageTemplate = ({children, pageType}) => (
 )
 
 UserPageTemplate.propTypes = {
-    children: PropTypes.element.isRequired,
+    children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
     pageType: PropTypes.oneOf(['notes', 'twitters', 'articles'])
 };
 
